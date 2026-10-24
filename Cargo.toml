@@ -1,0 +1,20 @@
+[package]
+name = "s4-xero-extract"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.85"
+license = "GPL-3.0-only"
+description = "Unofficial extractor for the resource archives of a locally installed S4 League client (Xero private server)"
+readme = "README.md"
+publish = false
+
+[dependencies]
+chacha20 = "0.10.2"
+crc32fast = "1.5.3"
+rayon = "1.12.0"
+rfd = "0.17.2"
+snap = "1.1.2"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
